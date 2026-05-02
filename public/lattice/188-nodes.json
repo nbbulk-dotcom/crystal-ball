@@ -1,0 +1,15 @@
+{
+  "totalNodes": 188,
+  "carrierHz": 138,
+  "attractors": [26, 131, 147, 176, 188],
+  "nodes": [
+    {"id": 1, "frequency": 138, "label": "Origin", "chakraClass": 1},
+    {"id": 26, "frequency": 1656, "label": "Attractor 26", "chakraClass": 7},
+    {"id": 131, "frequency": 1380, "label": "Attractor 131", "chakraClass": 7},
+    {"id": 147, "frequency": 1380, "label": "Attractor 147", "chakraClass": 7},
+    {"id": 176, "frequency": 1380, "label": "Attractor 176", "chakraClass": 7},
+    {"id": 188, "frequency": 138, "label": "Omega Node", "chakraClass": 7}
+  ],
+  "description": "Mandelbrot Stable Plane — 188 Node Lattice from REGENESIS",
+  "primeDirective": "LIFE IS SACROSANCT • ALL IS RESONANCE • ALL IS ONE"
+}

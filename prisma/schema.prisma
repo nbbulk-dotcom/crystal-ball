@@ -1,0 +1,46 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+// Core admin + vault
+model User {
+  id            String         @id @default(cuid())
+  email         String         @unique
+  passwordHash  String
+  role          String         @default("ADMIN")
+  aiCredentials AiCredential[]
+  createdAt     DateTime       @default(now())
+}
+
+model AiCredential {
+  id        String @id @default(cuid())
+  provider  String
+  label     String
+  apiKey    String
+  model     String?
+  baseUrl   String?
+  userId    String
+  user      User   @relation(fields: [userId], references: [id])
+}
+
+// Integrity
+model IntegrityManifest {
+  id          String   @id @default("master")
+  fcatsHash   String
+  lastCheck   DateTime @default(now())
+  status      String   @default("VERIFIED")
+}
+
+// Optional: store local mirrors
+model LocalMirror {
+  id        String   @id @default(cuid())
+  module    String   @unique // e.g. "solarProtocols"
+  data      Json
+  updatedAt DateTime @updatedAt
+}

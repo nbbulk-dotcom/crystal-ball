@@ -1,0 +1,15 @@
+{
+  "7ClassSystem": true,
+  "vagusFundamental": "0.1 Hz",
+  "melaninPhonon": "44.7 THz",
+  "formula": "f_class = f0 / √N_eff",
+  "classes": [
+    {"class":1,"name":"Dermal eumelanin","hz":"85–220"},
+    {"class":2,"name":"Gut melanocytes","hz":"220–330"},
+    {"class":3,"name":"Neuromelanin","hz":"330–440"},
+    {"class":4,"name":"Cardiac melanocytes","hz":"440–550"},
+    {"class":5,"name":"Laryngeal melanocytes","hz":"550–660"},
+    {"class":6,"name":"Pineal/retinal","hz":"660–880"},
+    {"class":7,"name":"Leptomeningeal","hz":"880–1000"}
+  ]
+}

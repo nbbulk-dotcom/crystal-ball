@@ -1,0 +1,12 @@
+{
+  "source": "local-mirror-regenesis",
+  "classes": [
+    {"id":1,"name":"Commoner","range":"85–220 Hz","protocol":"High UVI dermal grounding","minutes":45},
+    {"id":2,"name":"Merchant","range":"220–330 Hz","protocol":"Gut melanocytes midday","minutes":30},
+    {"id":3,"name":"Priest","range":"330–440 Hz","protocol":"Neuromelanin focus","minutes":25},
+    {"id":4,"name":"Scribe","range":"440–550 Hz","protocol":"Cardiac resonance","minutes":20},
+    {"id":5,"name":"Social","range":"550–660 Hz","protocol":"Laryngeal activation","minutes":20},
+    {"id":6,"name":"Ascetic","range":"660–880 Hz","protocol":"Pineal/retinal","minutes":15},
+    {"id":7,"name":"King","range":"880–1000 Hz","protocol":"Leptomeningeal crown","minutes":10}
+  ]
+}

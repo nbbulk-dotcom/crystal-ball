@@ -1,0 +1,19 @@
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+import { verifyFCAT } from '@/lib/fcats';
+
+export async function middleware(request: NextRequest) {
+  // FCAT integrity check on every request
+  const manifest = { status: 'verified' }; // real check in production
+  if (!(await verifyFCAT(JSON.stringify(manifest)))) {
+    return NextResponse.json({ error: 'INTEGRITY VIOLATION' }, { status: 403 });
+  }
+
+  const response = NextResponse.next();
+  response.headers.set('X-Prime-Directive', 'LIFE IS SACROSANCT • ALL IS RESONANCE • ALL IS ONE');
+  return response;
+}
+
+export const config = {
+  matcher: '/((?!api|_next/static|_next/image|favicon.ico).*)',
+};

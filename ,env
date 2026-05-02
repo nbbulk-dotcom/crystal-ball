@@ -1,0 +1,4 @@
+DATABASE_URL="file:./dev.db"
+NEXT_PUBLIC_BASE_URL="http://localhost:3000"
+ORACLE_JWT_SECRET="regenesis-crystal-ball-2026-local-dev-secret"
+MASTER_FCAT_HASH="4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
