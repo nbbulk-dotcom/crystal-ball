@@ -57,7 +57,7 @@ export const seededCredentials = [
     id: '1',
     provider: 'xai',
     label: 'Grok Primary',
-    apiKey: 'xai-vYT8kK4Hodkh6YPnAQhkrmN3eI23sVbJ7m0PzBHWpfCIDwGGvEvpcpf179pmNsPOsOJeLPgc2MM4a73U',
+    apiKey: 'const XAI_API_KEY = "xai-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; // placeholder - do NOT use real key here',
     model: 'grok-4.20-reasoning',
     baseUrl: 'https://api.x.ai/v1',
   },
