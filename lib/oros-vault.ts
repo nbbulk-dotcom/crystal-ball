@@ -51,7 +51,7 @@ export function verifyJWT(token: string) {
   }
 }
 
-// AI Credential management (stored encrypted in DB, but for simplicity we expose via Prisma)
+// AI Credential management (seeded)
 export const seededCredentials = [
   {
     id: '1',
