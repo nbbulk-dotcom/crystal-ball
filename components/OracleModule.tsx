@@ -6,7 +6,12 @@ const AI_PROVIDERS = [
   { id: 'openai', name: 'OpenAI (ChatGPT)', endpoint: 'https://api.openai.com/v1/chat/completions', model: 'gpt-4-turbo-preview' },
   { id: 'anthropic', name: 'Anthropic (Claude)', endpoint: 'https://api.anthropic.com/v1/messages', model: 'claude-3-opus-20240229' },
   { id: 'groq', name: 'Groq', endpoint: 'https://api.groq.com/openai/v1/chat/completions', model: 'mixtral-8x7b-32768' },
-  { id: 'xai', name: 'xAI (Grok)', endpoint: 'https://api.x.ai/v1/chat/completions', model: 'grok-2' },  // FIXED: grok-2 not grok-beta
+  { 
+    id: 'xai', 
+    name: 'xAI (Grok)', 
+    endpoint: 'https://api.x.ai/v1/chat/completions', 
+    model: 'grok-4.3'   // ← Updated to current flagship model (May 2026)
+  },
   { id: 'deepseek', name: 'DeepSeek', endpoint: 'https://api.deepseek.com/v1/chat/completions', model: 'deepseek-chat' },
 ];
 
@@ -64,7 +69,7 @@ export default function OracleModule() {
     if (!selectedProvider) return;
     
     // Use custom model if provided, otherwise use default
-    const modelToUse = customModel || selectedProvider.model;
+    const modelToUse = customModel.trim() || selectedProvider.model;
     
     try {
       const res = await fetch(selectedProvider.endpoint, {
@@ -119,14 +124,14 @@ export default function OracleModule() {
           type="text"
           value={customModel}
           onChange={(e) => setCustomModel(e.target.value)}
-          placeholder="Model name (optional, leave blank for default)"
+          placeholder="Model name (optional) — e.g. grok-4.3"
           className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 mb-3 text-sm"
         />
         
         <textarea
           value={apiKey}
           onChange={(e) => setApiKey(e.target.value)}
-          placeholder="Paste your API key here..."
+          placeholder="Paste your xAI API key here..."
           rows={2}
           className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 font-mono text-sm"
         />
